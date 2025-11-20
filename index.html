@@ -1,119 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/custom.css" />
-    <link rel="stylesheet" href="css/fonts.css" />
-    <link rel="stylesheet" href="css/general.css" />
-    <link rel="stylesheet" href="css/layout.css" />
-    <link rel="stylesheet" href="css/burger.css" />
-    <link rel="stylesheet" href="css/cards.css" />
-    <link rel="icon" type="image/png" href="img/fav.png" />
-    <title>Emergency Site</title>
-  </head>
-  <body id="frontpage">
-    <header>
-      <nav>
-        <div id="logotype-wrapper" class="logo">
-          <a href="index.html"> LOGO-TYPE </a>
-        </div>
-        <ul class="menu">
-          <li><a class="menuItem" href="instruction.html">Nærkontakt </a></li>
-          <li><a class="menuItem" href="register.html">Indberet</a></li>
-        </ul>
-        <button class="burger">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-        </button>
-      </nav>
-    </header>
-    <section id="main-disclamer">
-      <div id="main-disclamer-content">
-        <img src="warning" alt="ICON" />
-        <div>
-          <h1>OVERSKRIFT</h1>
-          <p class="sub">Underrubrik</p>
-        </div>
-      </div>
-    </section>
-    <main>
-      <section id="daily">
-        <article class="daily_card">
-          <img src="" alt="teaser_img" />
-          <div class="daily_text">
-            <h2>Teaser</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-              magnam ducimus ea, sed minima asperiores.
-            </p>
-            <a href="" class="cta_btn">Se mere</a>
-          </div>
-        </article>
-        <article class="daily_card">
-          <img src="" alt="teaser_img" />
-          <div class="daily_text">
-            <h2>Teaser</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-              magnam ducimus ea, sed minima asperiores.
-            </p>
-            <a href="" class="cta_btn">Se mere</a>
-          </div>
-        </article>
-      </section>
-      <section id="breaking">
-        <article class="news_card">
-          <h3>Nyhed</h3>
-          <p>Lorem ipsum dolor sit, sed minima asperiores.</p>
-          <img src="" alt="news_img" />
-          <a class="cta_btn" href="">Læs mere</a>
-        </article>
-        <article class="news_card">
-          <h3>Nyhed</h3>
-          <p>Lorem ipsum dolor sit, sed minima asperiores.</p>
-          <img src="" alt="news_img" />
-          <a class="cta_btn" href="">Læs mere</a>
-        </article>
-        <article class="news_card">
-          <h3>Nyhed</h3>
-          <p>Lorem ipsum dolor sit, sed minima asperiores.</p>
-          <img src="" alt="news_img" />
-          <a class="cta_btn" href="">Læs mere</a>
-        </article>
-      </section>
-    </main>
 
-    <footer>
-      <nav class="some">
-        <ul>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-        </ul>
-      </nav>
-      <nav class="another">
-        <ul>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-        </ul>
-      </nav>
-      <nav class="yetanother">
-        <ul>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-        </ul>
-      </nav>
-    </footer>
-    <script src="js/burger.js"></script>
-    <!-- <script src="js/main.js"></script> -->
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/custom.css" />
+  <link rel="stylesheet" href="css/fonts.css" />
+  <link rel="stylesheet" href="css/general.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/burger.css" />
+  <link rel="stylesheet" href="css/cards.css" />
+  <link rel="stylesheet" href="css/infographic.css" />
+  <link rel="icon" type="image/png" href="img/fav.png" />
+  <title>Emergency Site</title>
+</head>
+
+<body id="frontpage">
+  <header>
+    <nav>
+      <div id="logotype-wrapper" class="logo">
+        <a href="index.html"> <img src="img/logo3.svg" alt="logo"> </a>
+      </div>
+
+      <ul class="menu">
+        <li><a class="menuItem" href="instructions.html">Løsninger </a></li>
+        <li><a class="menuItem" href="register.html">Infomail</a></li>
+        <label class="switch">
+          <input type="checkbox" id="toggle">
+          <span class="slider"></span>
+        </label>
+      </ul>
+
+
+
+      <button class="burger">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+    </nav>
+  </header>
+  <section id="main-disclamer">
+    <div id="main-disclamer-content">
+      <img src="img/snefnug.svg" alt="ICON" class="icon" />
+      <div class="h1-p-forside">
+        <h1>KULDEN ER KOMMET!</h1>
+        <p class="sub">Efter en varm lang sommer er det begyndt at blive koldere i vejret - men hov du har helt glemt
+          hvordan man skal opføre
+          sig i sådan et vejr! Bare rolig - her kommer guiden.</p>
+      </div>
+    </div>
+  </section>
+  <main>
+    <section id="daily">
+      <article class="daily_card">
+        <img src="img/pigekompas.webp" alt="teaser_img" />
+        <div class="daily_text">
+          <h2>Vinterkrise: Eksperter Afslører Sandheden!</h2>
+          <p>
+            Er din vinterhumør på frysepunktet? Vores (selvudnævnte) kulde-eksperter har samlet tre geniale løsninger.
+            Find ud af, hvad du virkelig skal gøre for at overleve den danske
+            vinter. Læs med nu!
+          </p>
+          <a href="instructions.html" class="cta_btn">Se mere</a>
+        </div>
+      </article>
+      <article class="daily_card">
+        <img src="img/tegning.webp" alt="teaser_img" />
+        <div class="daily_text">
+          <h2>Få Personlig Rådgivning</h2>
+          <p>
+            Træt af at gætte? Glem generiske råd! Tryk her og få øjeblikkelig, personlig rådgivning til at bekæmpe din
+            specifikke
+            kuldekrise. Få din vinterstrategi skræddersyet og vend humøret fra istap
+            til solskin. Stop med at fryse – start med at handle!
+          </p>
+          <a href="register.html" class="cta_btn">Se mere</a>
+        </div>
+      </article>
+    </section>
+    <section id="breaking">
+      <article class="news_card">
+        <h3 class="h3_nyhed">Ella Hansen vidste det allerede som seksårig: Vinter er en fejl i systemet.</h3>
+        <p>Fra barndommens bitterkolde traumer til voksenlivets evige kuldechok. En historie om at internalisere
+          vinterhaderi fra
+          en ung alder.</p>
+        <img src="img/pige2.webp" alt="news_img" class="pige2">
+
+
+        <dialog id="dialog1">
+          <form method="">
+            <h2>Ella Hansen vidste det allerede som seksårig: Vinter er en fejl i systemet.</h2>
+            <img src="img/pige2.webp" alt="news_img" class="pige2">
+            <p>Da seksårige Ella første gang mødte den danske vinter i al sin isnende pragt, var det ikke kærlighed ved
+              første blik.
+              Snarere en dyb, eksistentiel frygt, der skulle præge hendes forhold til årstiden for evigt. Mens andre
+              børn jublede over
+              snebolde og kælketure, sad Ella indendørs og drømte om sandaler og solskin. En pioner, kan man sige, inden
+              for den
+              moderne kuldeforskrækkelse. Hendes mor forsøgte ihærdigt at forklare fænomenet "dansk vinter" som en
+              "hyggelig" periode,
+              men Ella vidste bedre. Hygge var, når man ikke behøvede at iføre sig et ingeniør-designet lag-på-lag
+              system bare for at
+              gå ned til postkassen.</p>
+            <h3>Fra snefnug til snechok: En livslang kamp</h3>
+            <p>Ellas barndom var en lang, sej kamp mod hue-tvang, frostbid og den evige trussel om våde vanter. Hun
+              husker tydeligt den
+              dag, hun opdagede, at man faktisk kunne bo steder, hvor temperaturen altid var over frysepunktet. En
+              åbenbaring, der
+              ændrede hendes verdenssyn for altid. Hvorfor skulle man overhovedet finde sig i at skovle sne, når man
+              kunne ligge på en
+              strand og bekymre sig om sand i bikinien? Et meget mere tiltalende problem, mente hun. Denne tidlige
+              indsigt har formet
+              hende til den kuldeskye kvinde, hun er i dag. En kvinde, der instinktivt når efter det tykkeste uldtæppe,
+              så snart
+              kalenderen viser oktober.</p>
+            <h3>Voksenlivets brutale realitet: Klimaanlægget er din ven</h3>
+            <p>Som voksen er Ella blevet en sand mester i kulde-undvigelse. Hun har perfektioneret kunsten at sidde
+              strategisk placeret
+              ved radiatoren på kontoret og har udviklet en sjette sans for kolde træk. Hun er typen, der har et tæppe
+              liggende under
+              skrivebordet, selv i juli, bare i tilfælde af et pludseligt temperaturdyk. Hendes veninder ryster på
+              hovedet, men
+              inderst inde ved de, at Ella bare er ærlig omkring den universelle sandhed: Vinteren er, og vil altid
+              være, en fejl i
+              systemet. Og måske, bare måske, har hun fat i noget. For hvem vil ikke gerne være en lille pige, der
+              drømmer om sommer,
+              frem for en voksen, der desperat søger et ledigt sæde ved pejsen?</p>
+            <button id="close_btn"> Luk</button>
+          </form>
+        </dialog>
+        <button class="cta_btn" id="cta_open1">læs mere </button>
+      </article>
+
+      <article class="news_card">
+        <h3 class="h3_hvid">Dit Indre Kulde-Kompas: Hvordan Du Overlever Vinteren Uden at Blive En Istap</h3>
+        <p class="p_hvid">Føler du dig konstant kold? Din krop sender dig måske kryptiske signaler. Lær at tyde dem, før
+          du fryser
+          fast.</p>
+        <img src="img/iceberg.webp" alt="news_img" />
+
+        <dialog id="dialog2">
+          <form method="">
+            <h2>Dit Indre Kulde-Kompas: Hvordan Du Overlever Vinteren Uden at Blive En Istap</h2>
+            <img src="img/iceberg.webp" alt="news_img" />
+            <p>Det er en kendsgerning, at vi ikke alle er skabt ens, når det kommer til temperaturregulering. Nogle
+              mennesker, typisk
+              dem fra Jylland med en forkærlighed for at lufte bare ankler i frostvejr, synes at have et indbygget
+              atomkraftværk i
+              kroppen. De er de såkaldte "varmblodede nordjyder". Så er der os andre. Os, hvis kulde-kompas altid peger
+              mod "iskold"
+              så snart september rammer. Vi er de evige frossenpinde, de der har overvejet at flytte til et drivhus for
+              at opretholde
+              en basal kropstemperatur. Men frygt ikke, der findes metoder til at navigere i denne kolde verden.</p>
+            <h3> Frossenpindens ABC: Anerkend, Bekæmp, Overlev.</h3>
+            <p>Det første skridt er at anerkende din indre frossenpind. Stop med at lade som om, du synes, en tur i
+              efteråret er
+              "frisk". Det er koldt, og du fortjener at pakke dig ind. Bekæmp derefter kulden med alle tilgængelige
+              midler. Vi taler
+              ikke kun om det obligatoriske uldundertøj – vi taler også om strategisk placerede varmepuder, varme drikke
+              i et konstant
+              flow og en generel modvilje mod at forlade hjemmet, medmindre det er absolut nødvendigt. Overlevelse
+              handler om at
+              minimere din eksponering for kolde overflader og maximere din kontakt med varme kilder. Din sofa er nu din
+              kommandocentral.</p>
+            <h3>Fra indre kulde til udstrålende varme: En mission umulig? </h3>
+            <p>Kan en frossenpind nogensinde blive en varmblodet nordjyde? Svaret er et rungende nej. Men du kan lære at
+              leve med det.
+              Din mission er ikke at ændre dit indre kulde-kompas, men at justere din tilværelse derefter. Tænk
+              strategisk. Vælg
+              restauranter med pejs. Prioritér badekar over bruser. Investér i fleeceforede leggings, der ligner
+              almindelige
+              strømpebukser – en genial opfindelse fra en anden frossenpind. Og husk, at det er helt acceptabelt at have
+              et arsenal af
+              tæpper spredt ud over hele dit hjem. Når alt kommer til alt, er det din krop, din komfort, og din
+              overlevelse, der
+              tæller. Lad de varmblodede nordjyder grine; du har det i det mindste varmt.</p>
+
+            <button id="close_btn2"> Luk</button>
+          </form>
+        </dialog>
+        <button class="cta_btn" id="cta_open2">læs mere </button>
+
+
+      </article>
+      <article class="news_card">
+        <h3>Kulden Gør Os Skøre</h3>
+        <p>Vidste du, at kulden ikke kun fryser dine tæer, men også din hjerne? Læs her, hvorfor vinteren er den største
+          trussel
+          mod din mentale sundhed.</p>
+        <img src="img/freezing.webp" alt="news_img" />
+
+        <dialog id="dialog3">
+          <form method="dialog">
+            <h2>Kulden Gør Os Skøre</h2>
+            <h5>Fra deprimerede d-vitamin-junkier til tøjkrisens ofre. Vinteren har en uhyggelig evne til at underminere
+              vores forstand
+              og vores gode humør. Er det tid til en total-lockdown?</h5>
+            <img src="img/freezing.webp" alt="news_img" />
+            <p>Vi kender alle den følelse: Den der dybe, nagende irritation, der sætter ind, så snart man ser den første
+              frost på
+              ruden. Det er ikke kun dine fingre, der fryser; det er også din hjerne. Vinteren i Danmark, med sine
+              korte, mørke dage
+              og temperaturer, der konstant flirter med frysepunktet, er ikke bare en ubelejlighed; det er en direkte
+              trussel mod
+              vores mentale stabilitet. Vi taler ikke om almindelig vintertræthed, men om en tilstand af "Neuro-Is",
+              hvor rationel
+              tænkning viger pladsen for tårer over en glemt hue og impulskøb af flybilletter til Thailand.</p>
+            <h3>Mørket og Melatoninen: En kemisk krig</h3>
+            <p>Kernen i problemet er vores biologiske ur, som fuldstændig går i udu, når solen går ned klokken 15:30.
+              Den manglende
+              eksponering for dagslys får vores krop til at tro, at det er sengetid hele tiden. Melatonin,
+              nattesøvnshormonet, pumper
+              rundt i kroppen som en overivrig bartender. Resultatet? Vi er konstant trætte, irriterede og ude af stand
+              til at huske,
+              hvor vi lagde vores nøgler. Vores energiniveau falder til et niveau, der bedst kan beskrives som "doven
+              snegl", og selv
+              de mindste opgaver – som at tage opvasken – føles som at bestige Mount Everest i sandaler. Dette er ikke
+              dovenskab;
+              dette er en kemisk krig, og din hjerne er slagmarken.</p>
+            <h3>Den Permanente Tøjkrise: Vi er ikke designet til lag-på-lag
+              En anden faktor, der driver os til vanvid, er den uendelige tøjkrise.</h3>
+            <p>Om vinteren er påklædning ikke en let beslutning; det er en ingeniørmæssig bedrift. Du skal balancere
+              mellem at undgå at
+              fryse ihjel udenfor og undgå at koge over, så snart du træder ind i en butik, der har skruet op for
+              varmen. Valget står
+              mellem 1) at ligne Michelin-manden i seks lag uld og termotøj, eller 2) at ligne en frossen pind i det
+              flatterende, men
+              livsfarlige, tynde tøj. Uanset hvad du vælger, ender du med at føle dig enten klaustrofobisk eller blå af
+              kulde. Det er
+              denne konstante, stressende beslutningsproces, der langsomt, men sikkert, tærer på vores mentale
+              ressourcer. Vi har
+              simpelthen ikke hjernekapacitet til både at holde varmen og fungere som fornuftige samfundsborgere.</p>
+            <button id="close_btn3"> Luk</button>
+          </form>
+        </dialog>
+        <button class="cta_btn" id="cta_open3">læs mere </button>
+
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <nav class="some">
+      <ul>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+      </ul>
+    </nav>
+    <nav class="another">
+      <ul>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+      </ul>
+    </nav>
+    <nav class="yetanother">
+      <ul>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+      </ul>
+    </nav>
+  </footer>
+  <script src="js/burger.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/dialog.js"></script>
+  <script src="js/darkmode.js"></script>
+
+
+
+</body>
+
 </html>
