@@ -1,11 +1,12 @@
 .daily_card {
   background-color: var(--color-card-bg);
-  display: grid;
   grid-template-columns: 3fr 5fr;
-  gap: 10px;
+  gap: 2rem;
   padding: 40px 0 40px 20px;
-  border-radius: var(--border-radius);
+  border-radius: 20px;
   height: minmax(200px, min-content);
+  display: flex;
+  align-items: flex-start; /* <- holder top flugt */
 }
 .daily_text {
   display: grid;
@@ -20,7 +21,7 @@
 }
 .daily_text p {
   padding-right: 2rem;
-  margin: 0 0 1rem 0;
+  margin: 0 0 1rem 1rem;
 }
 .daily_text .cta_btn {
   justify-self: left;
@@ -30,7 +31,31 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+
+  display: block;
+  margin: 0 auto;
+  max-width: 250px;
+  height: auto;
+  flex-shrink: 0;
 }
+.daily_card img {
+  width: 200px;
+  height: auto; /* Bevarer proportioner */
+  flex-shrink: 0; /* Forhindrer billedet i at blive trykket */
+}
+
+.daily_text .cta_btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  width: 200px; /* Fast bredde – gør den stabil */
+  max-width: 100%; /* Sikrer at den ikke overflyder små skærme */
+}
+
+/*news cards */
+
 .news_card {
   background-color: var(--color-news-bg);
   display: grid;
@@ -39,6 +64,7 @@
   padding: 1rem 0;
   height: minmax(300px, min-content);
 }
+
 .news_card:nth-child(2n) {
   background-color: var(--color-news-bg-inverted);
 }
@@ -77,8 +103,12 @@
   background-color: var(--color-cta-card-bg);
   color: var(--color-text-inverted);
   text-decoration: none;
-  width: max-content;
-  border-radius: var(--border-radius);
+  border-radius: 40px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 2px solid var(--border-cta-btn);
+  display: inline-flex;
+  align-items: center;
 }
 .news_card .cta_btn {
   background-color: var(--color-cta-newscard-bg);
@@ -90,4 +120,86 @@
 .cta_btn:after {
   content: "\2192";
   margin-left: 1rem;
+}
+
+/*forside nyheder */
+dialog {
+  background-color: var(--dialog-bokse);
+  padding: 2rem;
+  width: min(600px, 90%);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#dialog1 #close_btn {
+  display: center;
+  background-color: #7196ff;
+  color: black;
+
+  padding: 0.7rem 1.4rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.2s;
+  display: block;
+  margin: 1.5rem auto 0 auto;
+  margin-bottom: 2rem;
+}
+
+#dialog2 #close_btn2 {
+  display: center;
+  background-color: #7196ff;
+  color: black;
+
+  padding: 0.7rem 1.4rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.2s;
+  display: block;
+  margin: 1.5rem auto 0 auto;
+  margin-bottom: 2rem;
+}
+
+#dialog3 #close_btn3 {
+  display: center;
+  background-color: #7196ff;
+  color: black;
+
+  padding: 0.7rem 1.4rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.2s;
+  display: block;
+  margin: 1.5rem auto 0 auto;
+  margin-bottom: 2rem;
+}
+
+/* style artikel */
+
+dialog form h2 {
+  margin: 2rem !important;
+  font-size: 20px;
+  text-align: center;
+}
+
+dialog form h3 {
+  margin-top: 3rem !important;
+  margin-bottom: 0.8rem !important;
+  margin-left: 2rem !important;
+  margin-right: 2rem !important;
+}
+
+dialog form p {
+  margin-bottom: 1.2rem !important;
+  line-height: 1.6;
+  margin-left: 2rem !important;
+  margin-right: 2rem !important;
+}
+
+dialog img {
+  margin: 1.5rem 0 !important;
 }

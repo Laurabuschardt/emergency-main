@@ -30,6 +30,7 @@ footer nav {
   justify-content: space-between;
   align-items: center;
 }
+
 header nav > * {
   flex: 1;
 }
@@ -44,6 +45,23 @@ header ul {
 footer ul {
   flex-direction: column;
   padding-left: 1rem;
+}
+
+footer {
+  background-color: #303e65;
+}
+
+/* farve links i footer */
+.some a {
+  color: white;
+}
+
+.another a {
+  color: white;
+}
+
+.yetanother a {
+  color: white;
 }
 
 /* LAYOUT FOR SECTIONS */
@@ -81,4 +99,114 @@ footer ul {
   footer {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+
+/*ICON*/
+.icon {
+  width: 200px;
+  height: 200px;
+}
+
+/* forms i register.html */
+
+#main-form {
+  background-color: var(--form-background-color);
+  padding: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 20px;
+  accent-color: #7196ff;
+}
+
+/* Overskrifter */
+#main-form legend {
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+}
+input {
+  margin: 0.2rem;
+}
+
+/*INPUT FELTER  */
+
+.form-group {
+  margin-bottom: 0.2rem;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 250px;
+  height: 30px;
+  padding-left: 10px;
+  background-color: white;
+  border: 1px solid #7196ff;
+  border-radius: 20px;
+}
+
+input:hover {
+  background-color: lightgrey;
+}
+
+/* RANGE INPUT */
+
+input[type="range"] {
+  margin-top: 1rem;
+  cursor: pointer;
+  width: 250px;
+}
+
+/* RADIO BUTTONS */
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+input[type="radio"] {
+  cursor: pointer;
+}
+
+/* SUBMIT BUTTON */
+
+#submit_btn {
+  display: block;
+  margin: 20px auto;
+  background: var(--color-cta-card-bg);
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(85, 85, 98, 0.3);
+}
+
+#submit_btn:hover {
+  background: #89080c;
+}
+
+/* SUMMARY BOKS */
+
+#form-summary .form {
+  background-color: var(--form-background-color);
+  padding: 1.5rem;
+  border-radius: 20px;
+  margin-top: 2rem;
+}
+
+#form-summary h2 {
+  padding-bottom: 1rem;
+}
+
+/* fieldset */
+#main-form fieldset {
+  margin: 2rem;
+  border: 2px solid #000;
+  padding: 1rem;
+  border-radius: 10px;
 }

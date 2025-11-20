@@ -8,17 +8,20 @@
   display: block;
   width: 100%;
   height: 2px;
-  background-color: #333333;
+  background-color: var(--burger-color-menu);
   margin-bottom: 5px;
   transition: 0.2s linear;
 }
+
 .burger {
   display: none;
 }
-@media screen and (width < 800px) {
+
+@media screen and (max-width: 800px) {
   .menu {
     display: none;
   }
+
   .logo {
     flex: 0 0 50vw;
   }

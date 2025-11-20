@@ -1,81 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/custom.css" />
-    <link rel="stylesheet" href="css/fonts.css" />
-    <link rel="stylesheet" href="css/general.css" />
-    <link rel="stylesheet" href="css/layout.css" />
-    <link rel="stylesheet" href="css/burger.css" />
-    <link rel="stylesheet" href="css/cards.css" />
-    <link rel="stylesheet" href="css/form.css" />
-    <link rel="icon" type="image/png" href="img/fav.png" />
-    <title>Emergency Site</title>
-  </head>
-  <body id="register">
-    <header>
-      <nav>
-        <div id="logotype-wrapper" class="logo">
-          <a href="index.html"> LOGO-TYPE </a>
-        </div>
-        <ul class="menu">
-          <li><a class="menuItem" href="instruction.html">Nærkontakt </a></li>
-          <li><a class="menuItem" href="register.html">Indberet</a></li>
-        </ul>
-        <button class="burger">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-        </button>
-      </nav>
-    </header>
 
-    <main>
-      <h1>INDBERET</h1>
-      <section id="form-section">
-        <article id="form-info">
-          <h2>Overskrift</h2>
-          <p>Tekst</p>
-        </article>
-        <form id="webform"></form>
-      </section>
-      <section id="form-summary">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/custom.css" />
+  <link rel="stylesheet" href="css/fonts.css" />
+  <link rel="stylesheet" href="css/general.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/burger.css" />
+  <link rel="stylesheet" href="css/cards.css" />
+  <link rel="stylesheet" href="css/form.css" />
+  <link rel="icon" type="image/png" href="img/fav.png" />
+  <title>Emergency Site</title>
+</head>
+
+<body id="register">
+  <header>
+    <nav>
+      <div id="logotype-wrapper" class="logo">
+        <a href="index.html"> <img src="img/logo3.svg" alt="logo"> </a>
+      </div>
+      <ul class="menu">
+        <li><a class="menuItem" href="instructions.html">Løsninger </a></li>
+        <li><a class="menuItem" href="register.html">Infomail</a></li>
+        <label class="switch">
+          <input type="checkbox" id="toggle">
+          <span class="slider"></span>
+        </label>
+      </ul>
+      <button class="burger">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Opretning til infomail</h1>
+
+
+    <section class="form-section">
+      <form id="main-form">
+
+        <!-- FORM 1 -->
+        <fieldset>
+          <legend>Din info</legend>
+          <div class="form-group">
+            <label for="f-name">Fornavn</label>
+            <input id="f-name" name="fornavn" type="text" placeholder="Indtast fornavn" required>
+          </div>
+          <div class="form-group">
+            <label for="l-name">Efternavn</label>
+            <input id="l-name" name="efternavn" type="text" placeholder="Indtast efternavn" required>
+          </div>
+          <div class="form-group">
+            <label for="e-mail">E-mail</label>
+            <input id="e-mail" name="email" type="email" placeholder="Indtast E-mail" required>
+          </div>
+
+        </fieldset>
+
+        <!-- FORM 2 -->
+        <fieldset>
+          <legend>Hvor koldt synes du det er?</legend>
+          <input type="range" name="skala" id="skala" min="0" max="10" value="5">
+        </fieldset>
+
+
+        <!-- FORM 3 -->
+        <fieldset>
+          <legend>Hvad har du brug for mere info om?</legend>
+          <label><input type="radio" name="radio" value="Rejse"> Rejse</label>
+          <label><input type="radio" name="radio" value="Beklædning"> Beklædning</label>
+          <label><input type="radio" name="radio" value="Vinterhi"> Vinterhi</label>
+        </fieldset>
+
+        <button id="submit_btn" type="submit">Send</button>
+      </form>
+
+    </section>
+
+    <section id="form-summary">
+      <div class="form">
         <h2>Summary</h2>
         <article>
-          <p class="placeholder">Opsummering</p>
+          <p> Fornavn: <span class="fornavn_output"></span></p>
+          <p> Efternavn: <span class="eftername_output"></span></p>
+          <p>Email: <span class="e-mail_output"></span></p>
+          <p>Skala: <span class="skala_output"></span></p>
+          <p>Radio: <span class="radio_output"></span></p>
+
+
+
         </article>
-      </section>
-    </main>
-    <footer>
-      <nav class="some">
-        <ul>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-        </ul>
-      </nav>
-      <nav class="another">
-        <ul>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-        </ul>
-      </nav>
-      <nav class="yetanother">
-        <ul>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-        </ul>
-      </nav>
-    </footer>
-    <script src="js/burger.js"></script>
-    <!-- <script src="js/main.js"></script> -->
-  </body>
+      </div>
+    </section>
+
+
+
+
+
+  </main>
+  <footer>
+    <nav class="some">
+      <ul>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+      </ul>
+    </nav>
+    <nav class="another">
+      <ul>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+      </ul>
+    </nav>
+    <nav class="yetanother">
+      <ul>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+      </ul>
+    </nav>
+  </footer>
+  <script src="js/burger.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/darkmode.js"></script>
+  <script src="js/form.js"></script>
+
+</body>
+
 </html>

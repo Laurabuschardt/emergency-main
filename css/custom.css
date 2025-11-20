@@ -1,17 +1,21 @@
 :root {
+  color-scheme: light;
   /* Colours */
-  --color-bg: #fceb94; /* page background /*
+  --color-bg: light-dark(#7196ff, #111134); /* page background /*
+
 
   /* Header */
-  --color-head-bg: #ff4b00;
+  --color-head-bg: light-dark(#736de3, #303e65);
 
   /* Logotype */
-  --color-logotype-bg: #000000;
+  --color-logotype-bg: light-dark(#a73f43, #6b292b);
   --color-text-logotype: #fffae2;
   --font-logotype-size: 2rem;
 
   /* Global menu */
-  --color-menu-bg: #5a5b5e;
+  --color-menu-bg: light-dark(#a73f43, #6b292b);
+  --burger-color-menu: light-dark(#333, white);
+
   /* Links */
   --color-link-bg: #78766e;
   --color-link-hover: #fff; /* used */
@@ -19,16 +23,16 @@
   --border-radius-links: 1px;
 
   /* Headlines og rubrik */
-  --font-h1-size: 1rem;
+  --font-h1-size: 2rem;
   --font-sub1-size: 1rem;
   --font-h2-size: 1rem;
   --font-h3-size: 1rem;
-  --color-headline-bg: #4b4545;
-  --color-headline-text-page: #42413d;
+  --color-headline-bg: light-dark(#736de3, #303e65);
+  --color-headline-text-page: #f5f5dc;
 
   /* Tekst */
-  --color-text: #000;
-  --color-text-inverted: #cdccc4;
+  --color-text: light-dark(#000, white);
+  --color-text-inverted: light-dark(#cdccc4);
 
   /*  Marginer */
   --margin-head-bottom: 5px;
@@ -36,14 +40,17 @@
   /* Borders */
   --border-radius: 5px;
 
-  /* Cards */
-  --color-card-bg: #8a8585;
-  --color-cta-card-bg: #d5d2d0;
+  /*  Cards */
+  --color-card-bg: light-dark(beige, #928a8a);
+  --color-cta-card-bg: light-dark(#a73f43, #6b292b);
+  --dialog-bokse: light-dark(beige, #4c4b4b);
+  --border-cta-btn: light-dark(black, #a73f43);
+
   /* news-cards */
-  --color-news-bg: #dbdad4;
-  --color-news-bg-inverted: #585a5e;
-  --color-cta-newscard-bg: #787473;
-  --color-cta-newscard-bg-inverted: #7b7d83;
+  --color-news-bg: light-dark(lightgrey, #846767);
+  --color-news-bg-inverted: light-dark(grey, #4c4b4b);
+  --color-cta-newscard-bg: light-dark(#a73f43, #6b292b);
+  --color-cta-newscard-bg-inverted: light-dark(#a73f43, #6b292b);
 
   /* Fonts */
   --font-family-sans: "Rubik", ui-sans-serif;
@@ -63,7 +70,66 @@
   --form-submit-size: 1rem;
 
   /* Infographics */
-  --color-info-bg: #676161;
-  --color-infobox-1-bg: #cfcec6;
-  --color-infobox-2-bg: #969995;
+  --color-info-bg: light-dark(beige, #928a8a);
+  --color-infobox-1-bg: light-dark(rgba(173, 216, 230, 0.701), #846767);
+  --color-infobox-2-bg: light-dark(rgba(103, 171, 193, 0.69), #4c4b4b);
+
+  /* forms*/
+  --form-background-color: light-dark(beige, #928a8a);
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+/* toggle knap */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-right: 3rem;
+  margin-left: 2rem;
+  flex-shrink: 0;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.3s;
+  border-radius: 28px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+/* Når den er ON */
+input:checked + .slider {
+  background-color: darkgray;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
 }
